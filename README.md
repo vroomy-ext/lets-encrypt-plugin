@@ -17,7 +17,7 @@ plugins = [
 [env]
 lets-encrypt-email = "[Contact email]"
 lets-encrypt-domain = "[Domain]"
-lets-encrypt-directory = "./my/tls/dir" #Optional, default is "./tls"
+lets-encrypt-directory = "./my/tls/dir" # Optional, default is "./tls"
 lets-encrypt-port = "80" # Optional, default is "80"
 lets-encrypt-tls-port = "443" # Optional, default is "443"
 ```
