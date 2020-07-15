@@ -102,12 +102,14 @@ func needsCertificate(dir string) (ok bool, err error) {
 	}
 
 	var block *pem.Block
+	// Decode PEM block
 	if block, _ = pem.Decode([]byte(bs)); block == nil {
 		err = fmt.Errorf("error parsing certificate PEM for source of %s", filename)
 		return
 	}
 
 	var cert *x509.Certificate
+	// Parse certificate from PEM block
 	if cert, err = x509.ParseCertificate(block.Bytes); err != nil {
 		err = fmt.Errorf("failed to parse certificate: " + err.Error())
 		return
