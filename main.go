@@ -31,17 +31,20 @@ func Init(env map[string]string) (err error) {
 	var opts *Options
 	// Get options from environment variables
 	if opts, err = newOptions(env); err != nil {
+		err = fmt.Errorf("error parsing options: %v", err)
 		return
 	}
 
 	var ok bool
 	if ok, err = needsCertificate(opts.Directory); !ok || err != nil {
+		err = fmt.Errorf("error checking certificate: %v", err)
 		return
 	}
 
 	var u *User
 	// Create a new user
 	if u, err = newUser(opts.Email); err != nil {
+		err = fmt.Errorf("error creating user: %v", err)
 		return
 	}
 
@@ -52,11 +55,13 @@ func Init(env map[string]string) (err error) {
 	var client *lego.Client
 	// Initialize a new client
 	if client, err = newClient(opts, config); err != nil {
+		err = fmt.Errorf("error initializing client: %v", err)
 		return
 	}
 
 	// Register user using Client
 	if err = u.Register(client); err != nil {
+		err = fmt.Errorf("error registering user \"%s\": %v", u.Email, err)
 		return
 	}
 
