@@ -8,7 +8,7 @@ Add `github.com/vroomy/lets-encrypt-plugin as letsEncrypt` to the `plugins` sect
 ```toml
 plugins = [
 	"github.com/vroomy/lets-encrypt-plugin as letsEncrypt",
-	... other plugins
+	# ... other plugins here!
 ]
 ```
 
