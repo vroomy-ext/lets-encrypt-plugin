@@ -7,6 +7,7 @@ import (
 	"github.com/go-acme/lego/certcrypto"
 	"github.com/go-acme/lego/certificate"
 	"github.com/go-acme/lego/lego"
+	"github.com/go-acme/lego/registration"
 	"github.com/hatchify/scribe"
 	"github.com/vroomy/common"
 )
@@ -24,7 +25,12 @@ const (
 	defaultDirectory = "tls"
 )
 
-var out *scribe.Scribe = scribe.New("Let's Encrypt")
+var (
+	// Output writer
+	out *scribe.Scribe = scribe.New("Let's Encrypt")
+	// Default global registration options
+	registrationOpts = registration.RegisterOptions{TermsOfServiceAgreed: true}
+)
 
 // Init will be called by vroomy on initialization before Configure
 func Init(env map[string]string) (err error) {

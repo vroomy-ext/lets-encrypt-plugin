@@ -12,11 +12,15 @@ import (
 
 func newUser(email string) (up *User, err error) {
 	var u User
+	// Set random key for user
 	if u.key, err = ecdsa.GenerateKey(elliptic.P256(), rand.Reader); err != nil {
 		return
 	}
 
+	// Set user email
 	u.Email = email
+
+	// Assign reference to User
 	up = &u
 	return
 }
@@ -25,7 +29,9 @@ func newUser(email string) (up *User, err error) {
 type User struct {
 	key crypto.PrivateKey
 
-	Email        string
+	// Users email address
+	Email string
+	// Users Let's Encrypt registration
 	Registration *registration.Resource
 }
 
@@ -46,11 +52,8 @@ func (u *User) GetPrivateKey() crypto.PrivateKey {
 
 // Register will register with the provided Client
 func (u *User) Register(client *lego.Client) (err error) {
-	// Set registration options
-	opts := registration.RegisterOptions{TermsOfServiceAgreed: true}
-
 	// Register utilizing the provided client
-	if u.Registration, err = client.Registration.Register(opts); err != nil {
+	if u.Registration, err = client.Registration.Register(registrationOpts); err != nil {
 		return
 	}
 
