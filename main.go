@@ -37,20 +37,28 @@ func Init(env map[string]string) (err error) {
 	var opts *Options
 	// Get options from environment variables
 	if opts, err = newOptions(env); err != nil {
+		// Error parsing options, return
 		err = fmt.Errorf("error parsing options: %v", err)
 		return
 	}
 
 	var ok bool
 	// Check to see if a new certificate is needed
-	if ok, err = needsCertificate(opts.Directory); !ok || err != nil {
+	if ok, err = needsCertificate(opts.Directory); err != nil {
+		// Error encountered while checking certificate, return
 		err = fmt.Errorf("error checking certificate: %v", err)
 		return
+	} else if !ok {
+		// No certificate needed, return
+		return
 	}
+
+	out.Notification("Certificate is expired (or expiring soon), executing renewal process")
 
 	var u *User
 	// Create a new user
 	if u, err = newUser(opts.Email); err != nil {
+		// Error creating new user, return
 		err = fmt.Errorf("error creating user: %v", err)
 		return
 	}
@@ -62,15 +70,21 @@ func Init(env map[string]string) (err error) {
 	var client *lego.Client
 	// Initialize a new client
 	if client, err = newClient(opts, config); err != nil {
+		// Error initializing new client, return
 		err = fmt.Errorf("error initializing client: %v", err)
 		return
 	}
 
+	out.Success("Client created")
+
 	// Register user using Client
 	if err = u.Register(client); err != nil {
+		// Error registering user, return
 		err = fmt.Errorf("error registering user \"%s\": %v", u.Email, err)
 		return
 	}
+
+	out.Success("User registered")
 
 	// Make request
 	request := makeRequest(opts.Domain)
@@ -78,16 +92,21 @@ func Init(env map[string]string) (err error) {
 	var certificates *certificate.Resource
 	// Obtain certificates
 	if certificates, err = client.Certificate.Obtain(request); err != nil {
+		// Error obtaining certificates, return
 		err = fmt.Errorf("error obtaining certificates: %v", err)
 		return
 	}
 
+	out.Success("Certificates obtained")
+
 	// Save certificates to file
 	if err = saveCertificates(opts.Directory, certificates); err != nil {
+		// Error saving certificates, return
 		err = fmt.Errorf("error saving certificates: %v", err)
 		return
 	}
 
+	out.Success("Certificate renewal process complete")
 	return
 }
 
