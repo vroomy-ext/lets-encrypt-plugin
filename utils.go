@@ -114,6 +114,14 @@ func needsCertificate(dir string) (ok bool, err error) {
 	}
 
 	now := time.Now()
-	ok = now.Before(cert.NotBefore) || now.After(cert.NotAfter)
+	if ok = now.Before(cert.NotBefore) || now.After(cert.NotAfter); ok {
+		// Certificate is currently expired, return
+		return
+	}
+
+	// Set value for a week from now
+	nextWeek := now.Add(time.Hour * 24 * 7)
+	// Check to see if certificate expires a week from now
+	ok = nextWeek.After(cert.NotAfter)
 	return
 }
