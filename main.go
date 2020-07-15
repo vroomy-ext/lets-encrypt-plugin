@@ -42,6 +42,7 @@ func Init(env map[string]string) (err error) {
 	}
 
 	var ok bool
+	// Check to see if a new certificate is needed
 	if ok, err = needsCertificate(opts.Directory); !ok || err != nil {
 		err = fmt.Errorf("error checking certificate: %v", err)
 		return
