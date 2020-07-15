@@ -20,8 +20,8 @@ const (
 )
 
 const (
-	defaultPort      = "5001"
-	defaultTLSPort   = "5002"
+	defaultPort      = "80"
+	defaultTLSPort   = "443"
 	defaultDirectory = "tls"
 )
 
