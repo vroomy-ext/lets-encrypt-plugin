@@ -75,6 +75,7 @@ func Init(env map[string]string) (err error) {
 		return
 	}
 
+	// Save certificates to file
 	if err = saveCertificates(opts.Directory, certificates); err != nil {
 		err = fmt.Errorf("error saving certificates: %v", err)
 		return
