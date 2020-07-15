@@ -17,6 +17,7 @@ func newUser(email string) (up *User, err error) {
 	}
 
 	u.Email = email
+	up = &u
 	return
 }
 
