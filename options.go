@@ -21,6 +21,10 @@ func makeOptions(env map[string]string) (o Options) {
 		o.TLSPort = defaultTLSPort
 	}
 
+	if o.Directory = env["lets-encrypt-directory"]; len(o.Directory) == 0 {
+		o.Directory = defaultDirectory
+	}
+
 	o.Email = env["lets-encrypt-email"]
 	o.Domain = env["lets-encrypt-domain"]
 	return
@@ -28,8 +32,9 @@ func makeOptions(env map[string]string) (o Options) {
 
 // Options are the options used for Let's Encrypt SSL procurement
 type Options struct {
-	Email  string
-	Domain string
+	Email     string
+	Domain    string
+	Directory string
 
 	Port    string
 	TLSPort string
