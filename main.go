@@ -7,6 +7,7 @@ import (
 	"github.com/go-acme/lego/certcrypto"
 	"github.com/go-acme/lego/certificate"
 	"github.com/go-acme/lego/lego"
+	legolog "github.com/go-acme/lego/log"
 	"github.com/go-acme/lego/registration"
 	"github.com/hatchify/scribe"
 	"github.com/vroomy/common"
@@ -41,6 +42,11 @@ func Init(env map[string]string) (err error) {
 		err = fmt.Errorf("error parsing options: %v", err)
 		return
 	}
+
+	// Create log wrapper
+	var lw logWrapper
+	// Set log wrapper as our lego logger
+	legolog.Logger = &lw
 
 	var ok bool
 	// Check to see if a new certificate is needed
