@@ -10,10 +10,10 @@ github.com/go-acme/lego v2.7.2+incompatible h1:ThhpPBgf6oa9X/vRd0kEmWOsX7+vmYdck
 github.com/go-acme/lego v2.7.2+incompatible/go.mod h1:yzMNe9CasVUhkquNvti5nAtPmG94USbYxYrZfTkIn0M=
 github.com/google/go-cmp v0.5.1 h1:JFrFEBb2xKufg6XkJsJr+WbKb4FQlURi5RUcBveYu9k=
 github.com/google/go-cmp v0.5.1/go.mod h1:v8dTdLbMG2kIc/vJvl+f65V22dbkXbowE6jgT/gNBxE=
-github.com/hatchify/colors v0.4.78 h1:T76bb++0Kc4VPpDR18p3KD81vSDFPWKd46EKgkxyX/E=
-github.com/hatchify/colors v0.4.78/go.mod h1:t0952Ef1zDFMVTCkOwhrdJS9ToVWTdcJ3PWCHZADLuU=
-github.com/hatchify/scribe v0.4.82 h1:mvIwTMAzdnR0Zp+Q8Qv1WWlJfefrSh7aVQuaiYglluQ=
-github.com/hatchify/scribe v0.4.82/go.mod h1:V2/DGdSiTsTlmAI34zBhGI9mYiwTO80qPgdBz5EmRUg=
+github.com/hatchify/colors v0.4.79 h1:E7LXqZVYDFNaTcQGxlBSfEKQ2rByeAUW84uKkat3AoA=
+github.com/hatchify/colors v0.4.79/go.mod h1:t0952Ef1zDFMVTCkOwhrdJS9ToVWTdcJ3PWCHZADLuU=
+github.com/hatchify/scribe v0.4.84 h1:ybVsaWeGSY1mc4U/GYG8db23JvRcGFxxyGNQBaFivps=
+github.com/hatchify/scribe v0.4.84/go.mod h1:IpaksMO2cFlsCjTdYyx5gP6R+2j/P41sIERg+vhwoSs=
 github.com/miekg/dns v1.1.30 h1:Qww6FseFn8PRfw07jueqIXqodm0JKiiKuK0DeXSqfyo=
 github.com/miekg/dns v1.1.30/go.mod h1:KNUDUusw/aVsxyTYZM1oqvCicbwhgbNgztCETuNZ7xM=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
@@ -21,8 +21,8 @@ github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZN
 github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
 github.com/stretchr/testify v1.6.1 h1:hDPOHmpOpP40lSULcqw7IrRb/u7w6RpDC9399XyoNd0=
 github.com/stretchr/testify v1.6.1/go.mod h1:6Fq8oRcR53rry900zMqJjRRixrwX3KX962/h/Wwjteg=
-github.com/vroomy/common v0.1.1 h1:xMLEm+6m414SCoSR9/UMd1lU5XRhOT1lC9DJBz7wX7g=
-github.com/vroomy/common v0.1.1/go.mod h1:NROW9LhlSXaMhmp0/pRyJRtUD51A7q6mVPgFFh62t1c=
+github.com/vroomy/common v0.1.2 h1:NYh8l/T8yd8bxwBNwPytahY+EgQrBfLxUVAvb76qXxE=
+github.com/vroomy/common v0.1.2/go.mod h1:NROW9LhlSXaMhmp0/pRyJRtUD51A7q6mVPgFFh62t1c=
 golang.org/x/crypto v0.0.0-20190308221718-c2843e01d9a2/go.mod h1:djNgcEr1/C05ACkg1iLfiJU5Ep61QUkGW8qpdssI0+w=
 golang.org/x/crypto v0.0.0-20191011191535-87dc89f01550/go.mod h1:yigFU9vqHzYiE8UmvKecakEJjdnWj3jj499lnFckfCI=
 golang.org/x/crypto v0.0.0-20200622213623-75b288015ac9/go.mod h1:LzIPMQfyMNhhGPhUkYOs5KpL4U8rLKemX1yGLhDgUto=
