@@ -1,6 +1,6 @@
 package main
 
-import "github.com/Hatch1fy/errors"
+import "github.com/hatchify/errors"
 
 func newOptions(env map[string]string) (op *Options, err error) {
 	// Make options from environment
