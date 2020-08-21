@@ -1,7 +1,5 @@
 github.com/Hatch1fy/cron v0.4.80 h1:4/qX1Y7xGaN0EyrjZN9Z3MpJMfsOrgsgPz4iQsXEwiY=
 github.com/Hatch1fy/cron v0.4.80/go.mod h1:srziZhU5rAzVXoUSkVkzq3iZOk+u+Y7pV3nL+dXN9L4=
-github.com/Hatch1fy/errors v0.4.80 h1:LBr5Elytx6npBlF/36KTamC6I7h6VqkOVkRkbIdj3xY=
-github.com/Hatch1fy/errors v0.4.80/go.mod h1:SJFCeScmERvwtYMG7EU24Fe0KfXmiIs7tNlcIl0STKk=
 github.com/cenkalti/backoff v2.2.1+incompatible h1:tNowT99t7UNflLxfYYSlKYsBpXdEet03Pg2g16Swow4=
 github.com/cenkalti/backoff v2.2.1+incompatible/go.mod h1:90ReRw6GdpyfrHakVjL/QHaoyV4aDUVVkXQJJJ3NXXM=
 github.com/davecgh/go-spew v1.1.0 h1:ZDRjVQ15GmhC3fiQ8ni8+OwkZQO4DARzQgrnXU1Liz8=
@@ -14,8 +12,8 @@ github.com/hatchify/colors v0.4.79 h1:E7LXqZVYDFNaTcQGxlBSfEKQ2rByeAUW84uKkat3Ao
 github.com/hatchify/colors v0.4.79/go.mod h1:t0952Ef1zDFMVTCkOwhrdJS9ToVWTdcJ3PWCHZADLuU=
 github.com/hatchify/errors v0.4.82 h1:o7eB9r1X3Sx7PBRRXMCaAm+vXcoQLE4ZOesIv4oK36Q=
 github.com/hatchify/errors v0.4.82/go.mod h1:niCrsPjs0fFes147TgJ0LSUVdtavQTUvBxNoJm9Vew0=
-github.com/hatchify/scribe v0.4.84 h1:ybVsaWeGSY1mc4U/GYG8db23JvRcGFxxyGNQBaFivps=
-github.com/hatchify/scribe v0.4.84/go.mod h1:IpaksMO2cFlsCjTdYyx5gP6R+2j/P41sIERg+vhwoSs=
+github.com/hatchify/scribe v0.4.85 h1:WAk+15H9vS107uM4SOq1+/0H3rjsC6YuCMn0+kaeOBE=
+github.com/hatchify/scribe v0.4.85/go.mod h1:Z8YLt9euurwMOwav9pqQrsMCOodHv6/LZ7IaltMykgQ=
 github.com/miekg/dns v1.1.30 h1:Qww6FseFn8PRfw07jueqIXqodm0JKiiKuK0DeXSqfyo=
 github.com/miekg/dns v1.1.30/go.mod h1:KNUDUusw/aVsxyTYZM1oqvCicbwhgbNgztCETuNZ7xM=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
