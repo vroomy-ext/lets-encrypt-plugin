@@ -10,7 +10,7 @@ require (
 	github.com/hatchify/scribe v0.4.85
 	github.com/miekg/dns v1.1.31 // indirect
 	github.com/stretchr/testify v1.6.1 // indirect
-	github.com/vroomy/common v0.1.5
+	github.com/vroomy/common v0.1.6
 	golang.org/x/text v0.3.3 // indirect
 	gopkg.in/square/go-jose.v2 v2.5.1 // indirect
 )
