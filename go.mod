@@ -7,7 +7,7 @@ require (
 	github.com/go-acme/lego v2.7.2+incompatible
 	github.com/google/go-cmp v0.5.2 // indirect
 	github.com/hatchify/errors v0.4.82
-	github.com/hatchify/scribe v0.4.85
+	github.com/hatchify/scribe v0.4.87
 	github.com/miekg/dns v1.1.31 // indirect
 	github.com/stretchr/testify v1.6.1 // indirect
 	github.com/vroomy/common v0.1.6
