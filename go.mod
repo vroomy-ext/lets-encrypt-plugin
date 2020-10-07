@@ -11,8 +11,7 @@ require (
 	github.com/miekg/dns v1.1.31 // indirect
 	github.com/stretchr/testify v1.6.1 // indirect
 	github.com/vroomy/common v0.1.6
-	golang.org/x/crypto v0.0.0-20200820211705-5c72a883971a // indirect
-	golang.org/x/net v0.0.0-20200904194848-62affa334b73 // indirect
-	golang.org/x/text v0.3.3 // indirect
+	golang.org/x/crypto v0.0.0-20201002170205-7f63de1d35b0 // indirect
+	golang.org/x/net v0.0.0-20201006153459-a7d1128ccaa0 // indirect
 	gopkg.in/square/go-jose.v2 v2.5.1 // indirect
 )
