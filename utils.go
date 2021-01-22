@@ -9,10 +9,10 @@ import (
 	"path"
 	"time"
 
-	"github.com/go-acme/lego/certificate"
-	"github.com/go-acme/lego/challenge/http01"
-	"github.com/go-acme/lego/challenge/tlsalpn01"
-	"github.com/go-acme/lego/lego"
+	"github.com/go-acme/lego/v4/certificate"
+	"github.com/go-acme/lego/v4/challenge/http01"
+	"github.com/go-acme/lego/v4/challenge/tlsalpn01"
+	"github.com/go-acme/lego/v4/lego"
 )
 
 func newClient(opts *Options, config *lego.Config) (client *lego.Client, err error) {

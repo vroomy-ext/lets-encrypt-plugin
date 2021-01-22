@@ -3,11 +3,11 @@ package main
 import (
 	"fmt"
 
-	"github.com/go-acme/lego/certcrypto"
-	"github.com/go-acme/lego/certificate"
-	"github.com/go-acme/lego/lego"
-	legolog "github.com/go-acme/lego/log"
-	"github.com/go-acme/lego/registration"
+	"github.com/go-acme/lego/v4/certcrypto"
+	"github.com/go-acme/lego/v4/certificate"
+	"github.com/go-acme/lego/v4/lego"
+	legolog "github.com/go-acme/lego/v4/log"
+	"github.com/go-acme/lego/v4/registration"
 	"github.com/hatchify/errors"
 	"github.com/hatchify/scribe"
 	"github.com/vroomy/common"
